@@ -2,9 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # path('logout$', views.logout),
-    # path('add_message$', views.add_message),
-    path('/wall', views.wall),
-    # path('comment/(?P<messageId>\d+)$', views.comment),
-    # path('delete/(?P<messageId>\d+)$', views.delete),
+    path('thewall/logout', views.logout),
+    path('thewall/add_message', views.add_message),
+    path('thewall/wall', views.wall),
+    path('thewall/comment/(<int:messageId>)', views.comment),
+    path('thewall/delete/(<int:messageId>)', views.delete),
 ]

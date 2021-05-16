@@ -8,8 +8,4 @@ urlpatterns = [
     path('login', views.login, name="login"),
     path('users/', views.users, name="users"),
     path('users/(<int:id>)/delete', views.delete_user, name="delete_user"),
-    # path('registration', views.registration),
-    # path('login', views.login),
-    # # path('success$', views.success),
-    # path('logout', views.logout),
 ]
