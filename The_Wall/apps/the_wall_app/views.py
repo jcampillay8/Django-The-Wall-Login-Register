@@ -14,7 +14,7 @@ def wall(request):
             'postedComments' : Comment.objects.all(),
         }
         print('user is in session')
-        return render(request, 'thewall/wall.html')
+        return render(request, 'thewall/wall.html', context)
     return redirect('/')
 
 def add_message(request):
@@ -27,7 +27,7 @@ def add_message(request):
             user = thisUser,
         )
         newMessage.save()
-    return redirect('/wall')
+    return redirect('/thewall/wall')
 
 def comment(request, messageId):
     print('add comment initiated')
